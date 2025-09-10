@@ -1,3 +1,115 @@
+/* 불꽃 살림단 소개 카드 레이아웃 및 효과 */
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.about-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 32px 28px;
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 400px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  border: 2px solid #ffe3e3;
+}
+.about-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(232,93,4,0.15);
+  border-color: #e85d04;
+}
+.about-card h2 {
+  font-size: 1.6em;
+  color: #e85d04;
+  margin-bottom: 12px;
+}
+.about-card h3 {
+  font-size: 1.15em;
+  color: #495057;
+  margin-bottom: 10px;
+}
+.about-card p {
+  font-size: 1.05em;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.about-card ul {
+  margin-left: 18px;
+  margin-bottom: 8px;
+}
+.about-card ul li {
+  font-size: 0.98em;
+  color: #555;
+  margin-bottom: 6px;
+  line-height: 1.6;
+  transition: background 0.2s;
+  border-radius: 6px;
+  padding: 3px 7px;
+}
+.about-card ul li:hover {
+  background: #fffbe7;
+  color: #e85d04;
+}
+@media (max-width: 900px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 18px;
+    max-width: 98vw;
+  }
+  .about-card {
+    max-width: 98vw;
+    min-width: 0;
+  }
+}
+/* 불꽃 살림단 소개 섹션 스타일 */
+.about-fireworks {
+  background: linear-gradient(90deg, #ffe3e3 0%, #fffbe7 100%);
+  padding: 48px 0 32px 0;
+  margin: 40px 0;
+}
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 40px 32px;
+}
+.about-container h2 {
+  font-size: 2.2em;
+  color: #e85d04;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.about-container h3 {
+  font-size: 1.3em;
+  color: #495057;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.about-container p {
+  font-size: 1.08em;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.about-container ul {
+  margin-left: 18px;
+  margin-bottom: 12px;
+}
+.about-container ul li {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
