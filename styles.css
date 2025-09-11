@@ -1,3 +1,224 @@
+/* 플로깅 모집 섹션 리디자인 */
+.plogging-recruit {
+  background: linear-gradient(120deg, #e3f7ff 0%, #fffbe7 100%);
+  padding: 64px 0 48px 0;
+  margin: 40px 0;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,150,199,0.07);
+}
+.plogging-container {
+  max-width: 540px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(0,150,199,0.10);
+  padding: 40px 32px 32px 32px;
+  position: relative;
+}
+.plogging-visual {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.plogging-illust {
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #e3f7ff;
+  background: #e3f7ff;
+  object-fit: contain;
+}
+.plogging-container h2 {
+  font-size: 2em;
+  color: #0096c7;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+.plogging-highlight {
+  color: #e85d04;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.plogging-desc {
+  font-size: 1.08em;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.plogging-info {
+  margin: 18px 0 24px 0;
+  padding-left: 0;
+  list-style: none;
+}
+.plogging-info li {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 9px;
+  line-height: 1.7;
+  background: #f7fbff;
+  border-radius: 8px;
+  padding: 7px 14px;
+  box-shadow: 0 2px 8px rgba(0,150,199,0.04);
+}
+.plogging-info li span {
+  color: #0096c7;
+  font-weight: 600;
+  margin-right: 7px;
+}
+.plogging-form-card {
+  background: #f7fbff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #e3f7ff;
+  padding: 24px 18px 18px 18px;
+  margin-top: 18px;
+}
+.plogging-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-size: 1em;
+  color: #0096c7;
+  font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 7px;
+  border: 1.5px solid #bde0fe;
+  font-size: 1em;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0096c7;
+  outline: none;
+}
+.plogging-btn {
+  background: linear-gradient(90deg, #0096c7 0%, #e85d04 100%);
+  color: #fff;
+  font-size: 1.08em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.18s, transform 0.18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.plogging-btn-icon {
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+.plogging-btn:hover {
+  background: linear-gradient(90deg, #e85d04 0%, #0096c7 100%);
+  transform: scale(1.04);
+}
+@media (max-width: 600px) {
+  .plogging-container {
+    padding: 18px 8px 18px 8px;
+  }
+  .plogging-illust {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* 플로깅 모집 섹션 스타일 */
+.plogging-recruit {
+  background: linear-gradient(90deg, #e3f7ff 0%, #fffbe7 100%);
+  padding: 56px 0 48px 0;
+  margin: 40px 0;
+}
+.plogging-container {
+  max-width: 540px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 40px 32px 32px 32px;
+}
+.plogging-container h2 {
+  font-size: 2em;
+  color: #0096c7;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.plogging-container ul {
+  margin: 18px 0 24px 0;
+  padding-left: 18px;
+}
+.plogging-container ul li {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
+.plogging-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-size: 1em;
+  color: #0096c7;
+  font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 7px;
+  border: 1.5px solid #bde0fe;
+  font-size: 1em;
+  background: #f7fbff;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0096c7;
+  outline: none;
+}
+.plogging-btn {
+  background: linear-gradient(90deg, #0096c7 0%, #e85d04 100%);
+  color: #fff;
+  font-size: 1.08em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.18s, transform 0.18s;
+}
+.plogging-btn:hover {
+  background: linear-gradient(90deg, #e85d04 0%, #0096c7 100%);
+  transform: scale(1.04);
+}
+@media (max-width: 600px) {
+  .plogging-container {
+    padding: 18px 8px 18px 8px;
+  }
+}
 /* 불꽃 살림단 소개 카드 레이아웃 및 효과 */
 .about-flex {
   display: flex;
@@ -415,4 +636,283 @@ img.jj2 {
   max-width: 100%;
   height: auto;
   margin: 0%;
+}
+
+
+/* Activities Section Redesigned */
+.activities.redesigned {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.activities.redesigned .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.activities.redesigned .section-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.activities.redesigned .section-header h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.activities.redesigned .section-subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  font-weight: 300;
+}
+
+.activities.redesigned .activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.activities.redesigned .activity-card {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.activities.redesigned .activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  z-index: 2;
+}
+
+.activities.redesigned .activity-card.gradient-1::before {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+}
+
+.activities.redesigned .activity-card.gradient-2::before {
+  background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+}
+
+.activities.redesigned .activity-card.gradient-3::before {
+  background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.activities.redesigned .activity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.activities.redesigned .card-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  background: rgba(255,255,255,0.9);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.activities.redesigned .icon-emoji {
+  font-size: 1.5rem;
+}
+
+.activities.redesigned .card-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.activities.redesigned .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.activities.redesigned .activity-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.activities.redesigned .card-content {
+  padding: 30px;
+}
+
+.activities.redesigned .card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.activities.redesigned .card-content p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.activities.redesigned .card-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.activities.redesigned .tag {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.activities.redesigned .activity-card.gradient-2 .tag {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.activities.redesigned .activity-card.gradient-3 .tag {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+@media (max-width: 768px) {
+  .activities.redesigned .activity-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .activities.redesigned .section-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Instagram Card News Section */
+.instagram-cardnews {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.instagram-cardnews .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.instagram-cardnews .section-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.instagram-cardnews .section-header h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #e4405f, #fd1d1d);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.instagram-cardnews .section-subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  font-weight: 300;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.instagram-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram-post-placeholder {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.instagram-post-placeholder:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.placeholder-content .placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.placeholder-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.placeholder-content p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.instagram-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #e4405f, #fd1d1d);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.instagram-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(228, 64, 95, 0.4);
+}
+
+@media (max-width: 768px) {
+  .instagram-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+  
+  .instagram-cardnews .section-header h2 {
+    font-size: 2.5rem;
+  }
 }
