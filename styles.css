@@ -916,3 +916,323 @@ img.jj2 {
     font-size: 2.5rem;
   }
 }
+
+/* About Fireworks Section Redesigned - Glassmorphism Style */
+.about-fireworks.redesigned {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-fireworks.redesigned::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+.about-fireworks.redesigned .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-fireworks.redesigned .section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about-fireworks.redesigned .section-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  letter-spacing: -1px;
+}
+
+.about-fireworks.redesigned .section-subtitle {
+  font-size: 1.4rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.about-fireworks.redesigned .about-hero-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 50px 40px;
+  margin-bottom: 60px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-fireworks.redesigned .about-hero-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-fireworks.redesigned .hero-icon {
+  font-size: 5rem;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+  animation: float 3s ease-in-out infinite;
+}
+
+.about-fireworks.redesigned .about-hero-card h3 {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.about-fireworks.redesigned .about-hero-card p {
+  font-size: 1.15rem;
+  color: rgba(44, 62, 80, 0.8);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.about-fireworks.redesigned .about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+}
+
+.about-fireworks.redesigned .about-card.modern {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.about-fireworks.redesigned .about-card.modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+}
+
+.about-fireworks.redesigned .about-card.modern:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.about-fireworks.redesigned .card-header {
+  padding: 35px 35px 20px 35px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-fireworks.redesigned .card-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+}
+
+.about-fireworks.redesigned .card-header h3 {
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,249,250,0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.about-fireworks.redesigned .card-content {
+  padding: 0 35px 35px 35px;
+}
+
+/* Background Card Specific Styles */
+.about-fireworks.redesigned .background-card .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.about-fireworks.redesigned .background-card .stat-item:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.about-fireworks.redesigned .stat-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 10px rgba(238, 90, 36, 0.3);
+}
+
+.about-fireworks.redesigned .stat-label {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.about-fireworks.redesigned .card-description {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-top: 25px;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+/* Activity Card Specific Styles */
+.about-fireworks.redesigned .activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-fireworks.redesigned .activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border-left: 4px solid rgba(102, 126, 234, 0.8);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.about-fireworks.redesigned .activity-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(10px);
+  border-left-color: #667eea;
+}
+
+.about-fireworks.redesigned .activity-emoji {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.about-fireworks.redesigned .activity-item p {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+  font-size: 1.05rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Goal Card Specific Styles */
+.about-fireworks.redesigned .goal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.about-fireworks.redesigned .goal-item {
+  text-align: center;
+  padding: 25px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.about-fireworks.redesigned .goal-item:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.about-fireworks.redesigned .goal-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+}
+
+.about-fireworks.redesigned .goal-item h4 {
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.85) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.about-fireworks.redesigned .goal-item p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .about-fireworks.redesigned .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-fireworks.redesigned .section-header h2 {
+    font-size: 2.8rem;
+  }
+  
+  .about-fireworks.redesigned .about-hero-card {
+    padding: 35px 25px;
+  }
+  
+  .about-fireworks.redesigned .goal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-fireworks.redesigned .card-header,
+  .about-fireworks.redesigned .card-content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
