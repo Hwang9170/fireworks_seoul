@@ -74,6 +74,93 @@
         <p>아래 지원서를 작성해 주세요!<br>친구, 가족, 연인 누구든 환영합니다.<br>참여자 전원에게 인증샷 이벤트와 기념품 증정!</p>
       </div>
     </div>
+    
+    <!-- 플로깅 코스 로드맵 -->
+    <div class="plogging-roadmap">
+      <h3>🗺️ 플로깅 코스 안내</h3>
+      <p>여의도 한강공원을 따라 진행되는 플로깅 코스를 확인해보세요!</p>
+      <div class="roadmap-container">
+        <div class="roadmap-path">
+          <svg class="path-svg" viewBox="0 0 800 300">
+            <defs>
+              <linearGradient id="fireGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+                <stop offset="25%" style="stop-color:#f7931e;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#ffd700;stop-opacity:1" />
+                <stop offset="75%" style="stop-color:#ff8c00;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ff4500;stop-opacity:1" />
+              </linearGradient>
+              <filter id="fireGlow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge> 
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <path class="road-path" d="M50,150 Q200,50 350,150 T650,150 L750,150" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="4" stroke-dasharray="10,5"/>
+            <path class="animated-path" d="M50,150 Q200,50 350,150 T650,150 L750,150" fill="none" stroke="url(#fireGradient)" stroke-width="6" filter="url(#fireGlow)"/>
+          </svg>
+        </div>
+        <div class="roadmap-stations">
+          <div class="station start-station" data-step="1">
+            <div class="station-icon">🏁</div>
+            <div class="station-info">
+              <h4>집결지</h4>
+              <p>여의도 한강공원<br>입구 광장</p>
+              <span class="time">15:00</span>
+            </div>
+          </div>
+          <div class="station" data-step="2">
+            <div class="station-icon">🚶‍♀️</div>
+            <div class="station-info">
+              <h4>1구간</h4>
+              <p>한강 산책로<br>따라 이동</p>
+              <span class="time">15:30</span>
+            </div>
+          </div>
+          <div class="station" data-step="3">
+            <div class="station-icon">🧹</div>
+            <div class="station-info">
+              <h4>정화 활동</h4>
+              <p>쓰레기 수거 및<br>분리배출</p>
+              <span class="time">16:00</span>
+            </div>
+          </div>
+          <div class="station" data-step="4">
+            <div class="station-icon">📸</div>
+            <div class="station-info">
+              <h4>인증샷</h4>
+              <p>기념사진 촬영<br>및 SNS 업로드</p>
+              <span class="time">17:00</span>
+            </div>
+          </div>
+          <div class="station end-station" data-step="5">
+            <div class="station-icon">🎁</div>
+            <div class="station-info">
+              <h4>마무리</h4>
+              <p>기념품 증정<br>및 소감 나누기</p>
+              <span class="time">17:30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="roadmap-stats">
+        <div class="stat-item">
+          <span class="stat-number">3km</span>
+          <span class="stat-label">총 거리</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3시간</span>
+          <span class="stat-label">소요 시간</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5개소</span>
+          <span class="stat-label">정화 구역</span>
+        </div>
+      </div>
+    </div>
+    
     <div class="plogging-form-card">
       <form class="plogging-form" action="https://docs.google.com/forms/d/e/1FAIpQLSf_fake_google_form_link/viewform" method="get" target="_blank">
         <div class="form-group">
@@ -108,5 +195,94 @@
 </div>
 
 <script src="/team/teamscript.js"></script>
+<script>
+// 로드맵 스크롤 애니메이션
+function initRoadmapAnimation() {
+  const roadmapSection = document.querySelector('.plogging-roadmap');
+  const animatedPath = document.querySelector('.animated-path');
+  const stations = document.querySelectorAll('.station');
+  
+  if (!roadmapSection || !animatedPath) return;
+  
+  // 경로의 총 길이 계산
+  const pathLength = animatedPath.getTotalLength();
+  animatedPath.style.strokeDasharray = pathLength;
+  animatedPath.style.strokeDashoffset = pathLength;
+  
+  function updateRoadmapProgress() {
+    const rect = roadmapSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // 섹션이 화면에 들어왔는지 확인
+    const isVisible = rect.top < windowHeight && rect.bottom > 0;
+    
+    if (isVisible) {
+      // 스크롤 진행률 계산 (0~1)
+      const scrollProgress = Math.max(0, Math.min(1, 
+        (windowHeight - rect.top) / (windowHeight + rect.height)
+      ));
+      
+      // 경로 애니메이션
+      const drawLength = pathLength * scrollProgress;
+      animatedPath.style.strokeDashoffset = pathLength - drawLength;
+      
+      // 스테이션 활성화
+      stations.forEach((station, index) => {
+        const stationProgress = (index + 1) / stations.length;
+        if (scrollProgress >= stationProgress * 0.8) {
+          station.classList.add('active');
+        } else {
+          station.classList.remove('active');
+        }
+      });
+    }
+  }
+  
+  // 스크롤 이벤트 리스너
+  let ticking = false;
+  function handleScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateRoadmapProgress();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll);
+  
+  // 초기 실행
+  updateRoadmapProgress();
+  
+  // 리사이즈 이벤트에도 대응
+  window.addEventListener('resize', () => {
+    setTimeout(updateRoadmapProgress, 100);
+  });
+}
+
+// DOM 로드 후 초기화
+document.addEventListener('DOMContentLoaded', initRoadmapAnimation);
+
+// 햄버거 메뉴 함수 (기존)
+function toggleMenu() {
+    const sideMenu = document.getElementById('side-menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    sideMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+}
+
+// 클릭 시 메뉴 닫기
+document.addEventListener('click', function(event) {
+    const sideMenu = document.getElementById('side-menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        sideMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    }
+});
+</script>
 </body>
 </html>
