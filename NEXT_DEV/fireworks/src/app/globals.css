@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* 불그스름한 노이즈 배경 */
+.bg-lava {
+  background:
+    radial-gradient(1200px 600px at 60% 20%, rgba(255,90,30,0.15), transparent 60%),
+    radial-gradient(900px 500px at 20% 70%, rgba(255,0,0,0.12), transparent 55%),
+    radial-gradient(700px 400px at 85% 75%, rgba(255,120,60,0.18), transparent 60%),
+    #0a0a0a;
+}
+
+/* 카드/버튼용 글래스 */
+.glass {
+  @apply rounded-2xl border border-white/10 backdrop-blur-md;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+/* 텍스트 발광 */
+.glow {
+  text-shadow:
+    0 0 10px rgba(255, 80, 20, 0.65),
+    0 0 25px rgba(255, 50, 0, 0.35);
+}
+
+/* 라바 포인트(반짝) */
+.spark {
+  filter: blur(10px);
+  background: radial-gradient(circle, rgba(255,120,60,0.9), rgba(255,0,0,0.0) 60%);
+}
